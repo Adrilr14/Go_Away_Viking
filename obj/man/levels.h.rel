@@ -1,0 +1,53 @@
+XL2
+H 1 areas 31 global symbols
+M Levels_Manager
+S _level3_end Ref0000
+S _level4_end Ref0000
+S _level5_end Ref0000
+S _level6_end Ref0000
+S _level7_end Ref0000
+S _level8_end Ref0000
+S _level9_end Ref0000
+S man_level_init Ref0000
+S num_level Ref0000
+S man_level_render Ref0000
+S _tilesProt2 Ref0000
+S _level10 Ref0000
+S _level20 Ref0000
+S _level11 Ref0000
+S _level12 Ref0000
+S _level13 Ref0000
+S _level14 Ref0000
+S _level15 Ref0000
+S _level16 Ref0000
+S .__.ABS. Def0000
+S _level17 Ref0000
+S _level18 Ref0000
+S _level19 Ref0000
+S _tilesPrince Ref0000
+S _tilesProt Ref0000
+S _level1 Ref0000
+S _level2 Ref0000
+S _level3 Ref0000
+S _level4 Ref0000
+S _level5 Ref0000
+S _level6 Ref0000
+S _level10_end Ref0000
+S _level7 Ref0000
+S _level20_end Ref0000
+S _level11_end Ref0000
+S _level8 Ref0000
+S _level12_end Ref0000
+S _level9 Ref0000
+S _level13_end Ref0000
+S _level14_end Ref0000
+S _level15_end Ref0000
+S _level16_end Ref0000
+S _level17_end Ref0000
+S man_level_reset Ref0000
+S _level18_end Ref0000
+S _level19_end Ref0000
+S man_level_add Ref0000
+S _level1_end Ref0000
+S _level2_end Ref0000
+A _CODE size 0 flags 0 addr 0

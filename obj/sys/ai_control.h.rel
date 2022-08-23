@@ -1,0 +1,10 @@
+XL2
+H 1 areas 6 global symbols
+M AI_Control_System
+S sys_ai_control_update Ref0000
+S .__.ABS. Def0000
+S sys_ai_move_to Ref0000
+S sys_ai_patrol Ref0000
+S sys_ai_stand_by Ref0000
+S sys_ai_control_init Ref0000
+A _CODE size 0 flags 0 addr 0

@@ -1,0 +1,19 @@
+XL2
+H 1 areas F global symbols
+M Interrupt_Manager
+S man_ir_init Ref0000
+S man_ir10 Ref0000
+S man_ir11 Ref0000
+S man_ir12 Ref0000
+S .__.ABS. Def0000
+S man_ir1 Ref0000
+S man_ir2 Ref0000
+S man_ir3 Ref0000
+S man_ir4 Ref0000
+S man_ir5 Ref0000
+S man_ir6 Ref0000
+S man_ir7 Ref0000
+S man_ir8 Ref0000
+S man_ir9 Ref0000
+S man_ir_num_interrupt Ref0000
+A _CODE size 0 flags 0 addr 0

@@ -1,0 +1,25 @@
+XL2
+H 1 areas 15 global symbols
+M Entity_Manager
+S man_entity_forall_matching Ref0000
+S man_entity_getEntityVector_IX Ref0000
+S man_entity_create Ref0000
+S man_entity_init Ref0000
+S _enemy_sp_0 Ref0000
+S _enemy_sp_1 Ref0000
+S _enemy_sp_2 Ref0000
+S man_entity_ladder_invisible_matching Ref0000
+S man_entity_forall Ref0000
+S _hammer_sp Ref0000
+S .__.ABS. Def0000
+S man_entity_destroy Ref0000
+S man_entity_getEntity_hero_IY Ref0000
+S _invisible_sp Ref0000
+S _hammer_lado_sp_0 Ref0000
+S _hammer_lado_sp_1 Ref0000
+S _key_sp Ref0000
+S _viking_sp_0 Ref0000
+S _viking_sp_1 Ref0000
+S _viking_sp_2 Ref0000
+S man_entity_forall_pairs_matching Ref0000
+A _CODE size 0 flags 0 addr 0

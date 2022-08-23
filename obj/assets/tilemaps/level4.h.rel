@@ -1,0 +1,7 @@
+XL2
+H 1 areas 4 global symbols
+S _tilemap_04_W Def0028
+S .__.ABS. Def0000
+S _tilemap_04_SIZE Def07D0
+S _tilemap_04_H Def0032
+A _CODE size 0 flags 0 addr 0

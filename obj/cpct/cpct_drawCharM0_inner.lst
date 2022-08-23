@@ -1,0 +1,1042 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+
+
+                              1 ;;-----------------------------LICENSE NOTICE------------------------------------
+                              2 ;;  This file is part of CPCtelera: An Amstrad CPC Game Engine 
+                              3 ;;  Copyright (C) 2018 ronaldo / Fremos / Cheesetea / ByteRealms (@FranGallegoBR)
+                              4 ;;
+                              5 ;;  This program is free software: you can redistribute it and/or modify
+                              6 ;;  it under the terms of the GNU Lesser General Public License as published by
+                              7 ;;  the Free Software Foundation, either version 3 of the License, or
+                              8 ;;  (at your option) any later version.
+                              9 ;;
+                             10 ;;  This program is distributed in the hope that it will be useful,
+                             11 ;;  but WITHOUT ANY WARRANTY; without even the implied warranty of
+                             12 ;;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                             13 ;;  GNU Lesser General Public License for more details.
+                             14 ;;
+                             15 ;;  You should have received a copy of the GNU Lesser General Public License
+                             16 ;;  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                             17 ;;-------------------------------------------------------------------------------
+                             18 .module cpct_strings
+                             19 
+                             20 ;;
+                             21 ;; Include constants and general values
+                             22 ;;
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+
+
+                             23 .include "macros/cpct_undocumentedOpcodes.h.s"
+                              1 ;;-----------------------------LICENSE NOTICE------------------------------------
+                              2 ;;  This file is part of CPCtelera: An Amstrad CPC Game Engine 
+                              3 ;;  Copyright (C) 2016 ronaldo / Fremos / Cheesetea / ByteRealms (@FranGallegoBR)
+                              4 ;;
+                              5 ;;  This program is free software: you can redistribute it and/or modify
+                              6 ;;  it under the terms of the GNU Lesser General Public License as published by
+                              7 ;;  the Free Software Foundation, either version 3 of the License, or
+                              8 ;;  (at your option) any later version.
+                              9 ;;
+                             10 ;;  This program is distributed in the hope that it will be useful,
+                             11 ;;  but WITHOUT ANY WARRANTY; without even the implied warranty of
+                             12 ;;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                             13 ;;  GNU Lesser General Public License for more details.
+                             14 ;;
+                             15 ;;  You should have received a copy of the GNU Lesser General Public License
+                             16 ;;  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                             17 ;;-------------------------------------------------------------------------------
+                             18 
+                             19 ;;
+                             20 ;; File: Undocumented Opcodes
+                             21 ;;
+                             22 ;;    Macros to clarify source code when using undocumented opcodes. Only
+                             23 ;; valid to be used from assembly language (not from C).
+                             24 ;;
+                             25 
+                             26 ;; Macro: jr__0
+                             27 ;;    Opcode for "JR #0" instruction
+                             28 ;; 
+                             29 .macro jr__0
+                             30    .DW #0x0018  ;; JR #00 (Normally used as a modifiable jump, as jr 0 is an infinite loop)
+                             31 .endm
+                             32 
+                             33 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             34 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             35 ;; SLL Instructions
+                             36 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             37 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             38 
+                             39 ;; Macro: sll__b
+                             40 ;;    Opcode for "SLL b" instruction
+                             41 ;; 
+                             42 .macro sll__b
+                             43    .db #0xCB, #0x30  ;; Opcode for sll b
+                             44 .endm
+                             45 
+                             46 ;; Macro: sll__c
+                             47 ;;    Opcode for "SLL c" instruction
+                             48 ;; 
+                             49 .macro sll__c
+                             50    .db #0xCB, #0x31  ;; Opcode for sll c
+                             51 .endm
+                             52 
+                             53 ;; Macro: sll__d
+                             54 ;;    Opcode for "SLL d" instruction
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 3.
+Hexadecimal [16-Bits]
+
+
+
+                             55 ;; 
+                             56 .macro sll__d
+                             57    .db #0xCB, #0x32  ;; Opcode for sll d
+                             58 .endm
+                             59 
+                             60 ;; Macro: sll__e
+                             61 ;;    Opcode for "SLL e" instruction
+                             62 ;; 
+                             63 .macro sll__e
+                             64    .db #0xCB, #0x33  ;; Opcode for sll e
+                             65 .endm
+                             66 
+                             67 ;; Macro: sll__h
+                             68 ;;    Opcode for "SLL h" instruction
+                             69 ;; 
+                             70 .macro sll__h
+                             71    .db #0xCB, #0x34  ;; Opcode for sll h
+                             72 .endm
+                             73 
+                             74 ;; Macro: sll__l
+                             75 ;;    Opcode for "SLL l" instruction
+                             76 ;; 
+                             77 .macro sll__l
+                             78    .db #0xCB, #0x35  ;; Opcode for sll l
+                             79 .endm
+                             80 
+                             81 ;; Macro: sll___hl_
+                             82 ;;    Opcode for "SLL (hl)" instruction
+                             83 ;; 
+                             84 .macro sll___hl_
+                             85    .db #0xCB, #0x36  ;; Opcode for sll (hl)
+                             86 .endm
+                             87 
+                             88 ;; Macro: sll__a
+                             89 ;;    Opcode for "SLL a" instruction
+                             90 ;; 
+                             91 .macro sll__a
+                             92    .db #0xCB, #0x37  ;; Opcode for sll a
+                             93 .endm
+                             94 
+                             95 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             96 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             97 ;; IXL Related Macros
+                             98 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                             99 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            100 
+                            101 ;; Macro: ld__ixl    Value
+                            102 ;;    Opcode for "LD ixl, Value" instruction
+                            103 ;;  
+                            104 ;; Parameters:
+                            105 ;;    Value - An inmediate 8-bits value that will be loaded into ixl
+                            106 ;; 
+                            107 .macro ld__ixl    Value 
+                            108    .db #0xDD, #0x2E, Value  ;; Opcode for ld ixl, Value
+                            109 .endm
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 4.
+Hexadecimal [16-Bits]
+
+
+
+                            110 
+                            111 ;; Macro: ld__ixl_a
+                            112 ;;    Opcode for "LD ixl, a" instruction
+                            113 ;; 
+                            114 .macro ld__ixl_a
+                            115    .dw #0x6FDD  ;; Opcode for ld ixl, a
+                            116 .endm
+                            117 
+                            118 ;; Macro: ld__ixl_b
+                            119 ;;    Opcode for "LD ixl, B" instruction
+                            120 ;; 
+                            121 .macro ld__ixl_b
+                            122    .dw #0x68DD  ;; Opcode for ld ixl, b
+                            123 .endm
+                            124 
+                            125 ;; Macro: ld__ixl_c
+                            126 ;;    Opcode for "LD ixl, C" instruction
+                            127 ;; 
+                            128 .macro ld__ixl_c
+                            129    .dw #0x69DD  ;; Opcode for ld ixl, c
+                            130 .endm
+                            131 
+                            132 ;; Macro: ld__ixl_d
+                            133 ;;    Opcode for "LD ixl, D" instruction
+                            134 ;; 
+                            135 .macro ld__ixl_d
+                            136    .dw #0x6ADD  ;; Opcode for ld ixl, d
+                            137 .endm
+                            138 
+                            139 ;; Macro: ld__ixl_e
+                            140 ;;    Opcode for "LD ixl, E" instruction
+                            141 ;; 
+                            142 .macro ld__ixl_e
+                            143    .dw #0x6BDD  ;; Opcode for ld ixl, e
+                            144 .endm
+                            145 
+                            146 ;; Macro: ld__ixl_ixh
+                            147 ;;    Opcode for "LD ixl, IXH" instruction
+                            148 ;; 
+                            149 .macro ld__ixl_ixh
+                            150    .dw #0x6CDD  ;; Opcode for ld ixl, ixh
+                            151 .endm
+                            152 
+                            153 ;; Macro: ld__a_ixl
+                            154 ;;    Opcode for "LD A, ixl" instruction
+                            155 ;; 
+                            156 .macro ld__a_ixl
+                            157    .dw #0x7DDD  ;; Opcode for ld a, ixl
+                            158 .endm
+                            159 
+                            160 ;; Macro: ld__b_ixl
+                            161 ;;    Opcode for "LD B, ixl" instruction
+                            162 ;; 
+                            163 .macro ld__b_ixl
+                            164    .dw #0x45DD  ;; Opcode for ld b, ixl
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 5.
+Hexadecimal [16-Bits]
+
+
+
+                            165 .endm
+                            166 
+                            167 ;; Macro: ld__c_ixl
+                            168 ;;    Opcode for "LD c, ixl" instruction
+                            169 ;; 
+                            170 .macro ld__c_ixl
+                            171    .dw #0x4DDD  ;; Opcode for ld c, ixl
+                            172 .endm
+                            173 
+                            174 ;; Macro: ld__d_ixl
+                            175 ;;    Opcode for "LD D, ixl" instruction
+                            176 ;; 
+                            177 .macro ld__d_ixl
+                            178    .dw #0x55DD  ;; Opcode for ld d, ixl
+                            179 .endm
+                            180 
+                            181 ;; Macro: ld__e_ixl
+                            182 ;;    Opcode for "LD e, ixl" instruction
+                            183 ;; 
+                            184 .macro ld__e_ixl
+                            185    .dw #0x5DDD  ;; Opcode for ld e, ixl
+                            186 .endm
+                            187 
+                            188 ;; Macro: add__ixl
+                            189 ;;    Opcode for "Add ixl" instruction
+                            190 ;; 
+                            191 .macro add__ixl
+                            192    .dw #0x85DD  ;; Opcode for add ixl
+                            193 .endm
+                            194 
+                            195 ;; Macro: sub__ixl
+                            196 ;;    Opcode for "SUB ixl" instruction
+                            197 ;; 
+                            198 .macro sub__ixl
+                            199    .dw #0x95DD  ;; Opcode for sub ixl
+                            200 .endm
+                            201 
+                            202 ;; Macro: adc__ixl
+                            203 ;;    Opcode for "ADC ixl" instruction
+                            204 ;; 
+                            205 .macro adc__ixl
+                            206    .dw #0x8DDD  ;; Opcode for adc ixl
+                            207 .endm
+                            208 
+                            209 ;; Macro: sbc__ixl
+                            210 ;;    Opcode for "SBC ixl" instruction
+                            211 ;; 
+                            212 .macro sbc__ixl
+                            213    .dw #0x9DDD  ;; Opcode for sbc ixl
+                            214 .endm
+                            215 
+                            216 ;; Macro: and__ixl
+                            217 ;;    Opcode for "AND ixl" instruction
+                            218 ;; 
+                            219 .macro and__ixl
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 6.
+Hexadecimal [16-Bits]
+
+
+
+                            220    .dw #0xA5DD  ;; Opcode for and ixl
+                            221 .endm
+                            222 
+                            223 ;; Macro: or__ixl
+                            224 ;;    Opcode for "OR ixl" instruction
+                            225 ;; 
+                            226 .macro or__ixl
+                            227    .dw #0xB5DD  ;; Opcode for or ixl
+                            228 .endm
+                            229 
+                            230 ;; Macro: xor__ixl
+                            231 ;;    Opcode for "XOR ixl" instruction
+                            232 ;; 
+                            233 .macro xor__ixl
+                            234    .dw #0xADDD  ;; Opcode for xor ixl
+                            235 .endm
+                            236 
+                            237 ;; Macro: cp__ixl
+                            238 ;;    Opcode for "CP ixl" instruction
+                            239 ;; 
+                            240 .macro cp__ixl
+                            241    .dw #0xBDDD  ;; Opcode for cp ixl
+                            242 .endm
+                            243 
+                            244 ;; Macro: dec__ixl
+                            245 ;;    Opcode for "DEC ixl" instruction
+                            246 ;; 
+                            247 .macro dec__ixl
+                            248    .dw #0x2DDD  ;; Opcode for dec ixl
+                            249 .endm
+                            250 
+                            251 ;; Macro: inc__ixl
+                            252 ;;    Opcode for "INC ixl" instruction
+                            253 ;; 
+                            254 .macro inc__ixl
+                            255    .dw #0x2CDD  ;; Opcode for inc ixl
+                            256 .endm
+                            257 
+                            258 
+                            259 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            260 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            261 ;; IXH Related Macros
+                            262 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            263 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            264 
+                            265 ;; Macro: ld__ixh    Value
+                            266 ;;    Opcode for "LD IXH, Value" instruction
+                            267 ;;  
+                            268 ;; Parameters:
+                            269 ;;    Value - An inmediate 8-bits value that will be loaded into IXH
+                            270 ;; 
+                            271 .macro ld__ixh    Value 
+                            272    .db #0xDD, #0x26, Value  ;; Opcode for ld ixh, Value
+                            273 .endm
+                            274 
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 7.
+Hexadecimal [16-Bits]
+
+
+
+                            275 ;; Macro: ld__ixh_a
+                            276 ;;    Opcode for "LD IXH, a" instruction
+                            277 ;; 
+                            278 .macro ld__ixh_a
+                            279    .dw #0x67DD  ;; Opcode for ld ixh, a
+                            280 .endm
+                            281 
+                            282 ;; Macro: ld__ixh_b
+                            283 ;;    Opcode for "LD IXH, B" instruction
+                            284 ;; 
+                            285 .macro ld__ixh_b
+                            286    .dw #0x60DD  ;; Opcode for ld ixh, b
+                            287 .endm
+                            288 
+                            289 ;; Macro: ld__ixh_c
+                            290 ;;    Opcode for "LD IXH, C" instruction
+                            291 ;; 
+                            292 .macro ld__ixh_c
+                            293    .dw #0x61DD  ;; Opcode for ld ixh, c
+                            294 .endm
+                            295 
+                            296 ;; Macro: ld__ixh_d
+                            297 ;;    Opcode for "LD IXH, D" instruction
+                            298 ;; 
+                            299 .macro ld__ixh_d
+                            300    .dw #0x62DD  ;; Opcode for ld ixh, d
+                            301 .endm
+                            302 
+                            303 ;; Macro: ld__ixh_e
+                            304 ;;    Opcode for "LD IXH, E" instruction
+                            305 ;; 
+                            306 .macro ld__ixh_e
+                            307    .dw #0x63DD  ;; Opcode for ld ixh, e
+                            308 .endm
+                            309 
+                            310 ;; Macro: ld__ixh_ixl
+                            311 ;;    Opcode for "LD IXH, IXL" instruction
+                            312 ;; 
+                            313 .macro ld__ixh_ixl
+                            314    .dw #0x65DD  ;; Opcode for ld ixh, ixl
+                            315 .endm
+                            316 
+                            317 ;; Macro: ld__a_ixh
+                            318 ;;    Opcode for "LD A, IXH" instruction
+                            319 ;; 
+                            320 .macro ld__a_ixh
+                            321    .dw #0x7CDD  ;; Opcode for ld a, ixh
+                            322 .endm
+                            323 
+                            324 ;; Macro: ld__b_ixh
+                            325 ;;    Opcode for "LD B, IXH" instruction
+                            326 ;; 
+                            327 .macro ld__b_ixh
+                            328    .dw #0x44DD  ;; Opcode for ld b, ixh
+                            329 .endm
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 8.
+Hexadecimal [16-Bits]
+
+
+
+                            330 
+                            331 ;; Macro: ld__c_ixh
+                            332 ;;    Opcode for "LD c, IXH" instruction
+                            333 ;; 
+                            334 .macro ld__c_ixh
+                            335    .dw #0x4CDD  ;; Opcode for ld c, ixh
+                            336 .endm
+                            337 
+                            338 ;; Macro: ld__d_ixh
+                            339 ;;    Opcode for "LD D, IXH" instruction
+                            340 ;; 
+                            341 .macro ld__d_ixh
+                            342    .dw #0x54DD  ;; Opcode for ld d, ixh
+                            343 .endm
+                            344 
+                            345 ;; Macro: ld__e_ixh
+                            346 ;;    Opcode for "LD e, IXH" instruction
+                            347 ;; 
+                            348 .macro ld__e_ixh
+                            349    .dw #0x5CDD  ;; Opcode for ld e, ixh
+                            350 .endm
+                            351 
+                            352 ;; Macro: add__ixh
+                            353 ;;    Opcode for "ADD IXH" instruction
+                            354 ;; 
+                            355 .macro add__ixh
+                            356    .dw #0x84DD  ;; Opcode for add ixh
+                            357 .endm
+                            358 
+                            359 ;; Macro: sub__ixh
+                            360 ;;    Opcode for "SUB IXH" instruction
+                            361 ;; 
+                            362 .macro sub__ixh
+                            363    .dw #0x94DD  ;; Opcode for sub ixh
+                            364 .endm
+                            365 
+                            366 ;; Macro: adc__ixh
+                            367 ;;    Opcode for "ADC IXH" instruction
+                            368 ;; 
+                            369 .macro adc__ixh
+                            370    .dw #0x8CDD  ;; Opcode for adc ixh
+                            371 .endm
+                            372 
+                            373 ;; Macro: sbc__ixh
+                            374 ;;    Opcode for "SBC IXH" instruction
+                            375 ;; 
+                            376 .macro sbc__ixh
+                            377    .dw #0x9CDD  ;; Opcode for sbc ixh
+                            378 .endm
+                            379 
+                            380 ;; Macro: and__ixh
+                            381 ;;    Opcode for "AND IXH" instruction
+                            382 ;; 
+                            383 .macro and__ixh
+                            384    .dw #0xA4DD  ;; Opcode for and ixh
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 9.
+Hexadecimal [16-Bits]
+
+
+
+                            385 .endm
+                            386 
+                            387 ;; Macro: or__ixh
+                            388 ;;    Opcode for "OR IXH" instruction
+                            389 ;; 
+                            390 .macro or__ixh
+                            391    .dw #0xB4DD  ;; Opcode for or ixh
+                            392 .endm
+                            393 
+                            394 ;; Macro: xor__ixh
+                            395 ;;    Opcode for "XOR IXH" instruction
+                            396 ;; 
+                            397 .macro xor__ixh
+                            398    .dw #0xACDD  ;; Opcode for xor ixh
+                            399 .endm
+                            400 
+                            401 ;; Macro: cp__ixh
+                            402 ;;    Opcode for "CP IXH" instruction
+                            403 ;; 
+                            404 .macro cp__ixh
+                            405    .dw #0xBCDD  ;; Opcode for cp ixh
+                            406 .endm
+                            407 
+                            408 ;; Macro: dec__ixh
+                            409 ;;    Opcode for "DEC IXH" instruction
+                            410 ;; 
+                            411 .macro dec__ixh
+                            412    .dw #0x25DD  ;; Opcode for dec ixh
+                            413 .endm
+                            414 
+                            415 ;; Macro: inc__ixh
+                            416 ;;    Opcode for "INC IXH" instruction
+                            417 ;; 
+                            418 .macro inc__ixh
+                            419    .dw #0x24DD  ;; Opcode for inc ixh
+                            420 .endm
+                            421 
+                            422 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            423 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            424 ;; IYL Related Macros
+                            425 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            426 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            427 
+                            428 ;; Macro: ld__iyl    Value
+                            429 ;;    Opcode for "LD iyl, Value" instruction
+                            430 ;;  
+                            431 ;; Parameters:
+                            432 ;;    Value - An inmediate 8-bits value that will be loaded into iyl
+                            433 ;; 
+                            434 .macro ld__iyl    Value 
+                            435    .db #0xFD, #0x2E, Value  ;; Opcode for ld iyl, Value
+                            436 .endm
+                            437 
+                            438 ;; Macro: ld__iyl_a
+                            439 ;;    Opcode for "LD iyl, a" instruction
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 10.
+Hexadecimal [16-Bits]
+
+
+
+                            440 ;; 
+                            441 .macro ld__iyl_a
+                            442    .dw #0x6FFD  ;; Opcode for ld iyl, a
+                            443 .endm
+                            444 
+                            445 ;; Macro: ld__iyl_b
+                            446 ;;    Opcode for "LD iyl, B" instruction
+                            447 ;; 
+                            448 .macro ld__iyl_b
+                            449    .dw #0x68FD  ;; Opcode for ld iyl, b
+                            450 .endm
+                            451 
+                            452 ;; Macro: ld__iyl_c
+                            453 ;;    Opcode for "LD iyl, C" instruction
+                            454 ;; 
+                            455 .macro ld__iyl_c
+                            456    .dw #0x69FD  ;; Opcode for ld iyl, c
+                            457 .endm
+                            458 
+                            459 ;; Macro: ld__iyl_d
+                            460 ;;    Opcode for "LD iyl, D" instruction
+                            461 ;; 
+                            462 .macro ld__iyl_d
+                            463    .dw #0x6AFD  ;; Opcode for ld iyl, d
+                            464 .endm
+                            465 
+                            466 ;; Macro: ld__iyl_e
+                            467 ;;    Opcode for "LD iyl, E" instruction
+                            468 ;; 
+                            469 .macro ld__iyl_e
+                            470    .dw #0x6BFD  ;; Opcode for ld iyl, e
+                            471 .endm
+                            472 
+                            473 ;; Macro: ld__iyl_iyh
+                            474 ;;    Opcode for "LD iyl, IXL" instruction
+                            475 ;; 
+                            476 .macro ld__iyl_iyh
+                            477    .dw #0x6CFD  ;; Opcode for ld iyl, ixl
+                            478 .endm
+                            479 
+                            480 ;; Macro: ld__a_iyl
+                            481 ;;    Opcode for "LD A, iyl" instruction
+                            482 ;; 
+                            483 .macro ld__a_iyl
+                            484    .dw #0x7DFD  ;; Opcode for ld a, iyl
+                            485 .endm
+                            486 
+                            487 ;; Macro: ld__b_iyl
+                            488 ;;    Opcode for "LD B, iyl" instruction
+                            489 ;; 
+                            490 .macro ld__b_iyl
+                            491    .dw #0x45FD  ;; Opcode for ld b, iyl
+                            492 .endm
+                            493 
+                            494 ;; Macro: ld__c_iyl
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 11.
+Hexadecimal [16-Bits]
+
+
+
+                            495 ;;    Opcode for "LD c, iyl" instruction
+                            496 ;; 
+                            497 .macro ld__c_iyl
+                            498    .dw #0x4DFD  ;; Opcode for ld c, iyl
+                            499 .endm
+                            500 
+                            501 ;; Macro: ld__d_iyl
+                            502 ;;    Opcode for "LD D, iyl" instruction
+                            503 ;; 
+                            504 .macro ld__d_iyl
+                            505    .dw #0x55FD  ;; Opcode for ld d, iyl
+                            506 .endm
+                            507 
+                            508 ;; Macro: ld__e_iyl
+                            509 ;;    Opcode for "LD e, iyl" instruction
+                            510 ;; 
+                            511 .macro ld__e_iyl
+                            512    .dw #0x5DFD  ;; Opcode for ld e, iyl
+                            513 .endm
+                            514 
+                            515 ;; Macro: add__iyl
+                            516 ;;    Opcode for "Add iyl" instruction
+                            517 ;; 
+                            518 .macro add__iyl
+                            519    .dw #0x85FD  ;; Opcode for add iyl
+                            520 .endm
+                            521 
+                            522 ;; Macro: sub__iyl
+                            523 ;;    Opcode for "SUB iyl" instruction
+                            524 ;; 
+                            525 .macro sub__iyl
+                            526    .dw #0x95FD  ;; Opcode for sub iyl
+                            527 .endm
+                            528 
+                            529 ;; Macro: adc__iyl
+                            530 ;;    Opcode for "ADC iyl" instruction
+                            531 ;; 
+                            532 .macro adc__iyl
+                            533    .dw #0x8DFD  ;; Opcode for adc iyl
+                            534 .endm
+                            535 
+                            536 ;; Macro: sbc__iyl
+                            537 ;;    Opcode for "SBC iyl" instruction
+                            538 ;; 
+                            539 .macro sbc__iyl
+                            540    .dw #0x9DFD  ;; Opcode for sbc iyl
+                            541 .endm
+                            542 
+                            543 ;; Macro: and__iyl
+                            544 ;;    Opcode for "AND iyl" instruction
+                            545 ;; 
+                            546 .macro and__iyl
+                            547    .dw #0xA5FD  ;; Opcode for and iyl
+                            548 .endm
+                            549 
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 12.
+Hexadecimal [16-Bits]
+
+
+
+                            550 ;; Macro: or__iyl
+                            551 ;;    Opcode for "OR iyl" instruction
+                            552 ;; 
+                            553 .macro or__iyl
+                            554    .dw #0xB5FD  ;; Opcode for or iyl
+                            555 .endm
+                            556 
+                            557 ;; Macro: xor__iyl
+                            558 ;;    Opcode for "XOR iyl" instruction
+                            559 ;; 
+                            560 .macro xor__iyl
+                            561    .dw #0xADFD  ;; Opcode for xor iyl
+                            562 .endm
+                            563 
+                            564 ;; Macro: cp__iyl
+                            565 ;;    Opcode for "CP iyl" instruction
+                            566 ;; 
+                            567 .macro cp__iyl
+                            568    .dw #0xBDFD  ;; Opcode for cp iyl
+                            569 .endm
+                            570 
+                            571 ;; Macro: dec__iyl
+                            572 ;;    Opcode for "DEC iyl" instruction
+                            573 ;; 
+                            574 .macro dec__iyl
+                            575    .dw #0x2DFD  ;; Opcode for dec iyl
+                            576 .endm
+                            577 
+                            578 ;; Macro: inc__iyl
+                            579 ;;    Opcode for "INC iyl" instruction
+                            580 ;; 
+                            581 .macro inc__iyl
+                            582    .dw #0x2CFD  ;; Opcode for inc iyl
+                            583 .endm
+                            584 
+                            585 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            586 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            587 ;; IYH Related Macros
+                            588 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            589 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,
+                            590 
+                            591 ;; Macro: ld__iyh    Value
+                            592 ;;    Opcode for "LD iyh, Value" instruction
+                            593 ;;  
+                            594 ;; Parameters:
+                            595 ;;    Value - An inmediate 8-bits value that will be loaded into iyh
+                            596 ;; 
+                            597 .macro ld__iyh    Value 
+                            598    .db #0xFD, #0x26, Value  ;; Opcode for ld iyh, Value
+                            599 .endm
+                            600 
+                            601 ;; Macro: ld__iyh_a
+                            602 ;;    Opcode for "LD iyh, a" instruction
+                            603 ;; 
+                            604 .macro ld__iyh_a
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 13.
+Hexadecimal [16-Bits]
+
+
+
+                            605    .dw #0x67FD  ;; Opcode for ld iyh, a
+                            606 .endm
+                            607 
+                            608 ;; Macro: ld__iyh_b
+                            609 ;;    Opcode for "LD iyh, B" instruction
+                            610 ;; 
+                            611 .macro ld__iyh_b
+                            612    .dw #0x60FD  ;; Opcode for ld iyh, b
+                            613 .endm
+                            614 
+                            615 ;; Macro: ld__iyh_c
+                            616 ;;    Opcode for "LD iyh, C" instruction
+                            617 ;; 
+                            618 .macro ld__iyh_c
+                            619    .dw #0x61FD  ;; Opcode for ld iyh, c
+                            620 .endm
+                            621 
+                            622 ;; Macro: ld__iyh_d
+                            623 ;;    Opcode for "LD iyh, D" instruction
+                            624 ;; 
+                            625 .macro ld__iyh_d
+                            626    .dw #0x62FD  ;; Opcode for ld iyh, d
+                            627 .endm
+                            628 
+                            629 ;; Macro: ld__iyh_e
+                            630 ;;    Opcode for "LD iyh, E" instruction
+                            631 ;; 
+                            632 .macro ld__iyh_e
+                            633    .dw #0x63FD  ;; Opcode for ld iyh, e
+                            634 .endm
+                            635 
+                            636 ;; Macro: ld__iyh_iyl
+                            637 ;;    Opcode for "LD iyh, IyL" instruction
+                            638 ;; 
+                            639 .macro ld__iyh_iyl
+                            640    .dw #0x65FD  ;; Opcode for ld iyh, iyl
+                            641 .endm
+                            642 
+                            643 ;; Macro: ld__a_iyh
+                            644 ;;    Opcode for "LD A, iyh" instruction
+                            645 ;; 
+                            646 .macro ld__a_iyh
+                            647    .dw #0x7CFD  ;; Opcode for ld a, iyh
+                            648 .endm
+                            649 
+                            650 ;; Macro: ld__b_iyh
+                            651 ;;    Opcode for "LD B, iyh" instruction
+                            652 ;; 
+                            653 .macro ld__b_iyh
+                            654    .dw #0x44FD  ;; Opcode for ld b, iyh
+                            655 .endm
+                            656 
+                            657 ;; Macro: ld__c_iyh
+                            658 ;;    Opcode for "LD c, iyh" instruction
+                            659 ;; 
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 14.
+Hexadecimal [16-Bits]
+
+
+
+                            660 .macro ld__c_iyh
+                            661    .dw #0x4CFD  ;; Opcode for ld c, iyh
+                            662 .endm
+                            663 
+                            664 ;; Macro: ld__d_iyh
+                            665 ;;    Opcode for "LD D, iyh" instruction
+                            666 ;; 
+                            667 .macro ld__d_iyh
+                            668    .dw #0x54FD  ;; Opcode for ld d, iyh
+                            669 .endm
+                            670 
+                            671 ;; Macro: ld__e_iyh
+                            672 ;;    Opcode for "LD e, iyh" instruction
+                            673 ;; 
+                            674 .macro ld__e_iyh
+                            675    .dw #0x5CFD  ;; Opcode for ld e, iyh
+                            676 .endm
+                            677 
+                            678 ;; Macro: add__iyh
+                            679 ;;    Opcode for "Add iyh" instruction
+                            680 ;; 
+                            681 .macro add__iyh
+                            682    .dw #0x84FD  ;; Opcode for add iyh
+                            683 .endm
+                            684 
+                            685 ;; Macro: sub__iyh
+                            686 ;;    Opcode for "SUB iyh" instruction
+                            687 ;; 
+                            688 .macro sub__iyh
+                            689    .dw #0x94FD  ;; Opcode for sub iyh
+                            690 .endm
+                            691 
+                            692 ;; Macro: adc__iyh
+                            693 ;;    Opcode for "ADC iyh" instruction
+                            694 ;; 
+                            695 .macro adc__iyh
+                            696    .dw #0x8CFD  ;; Opcode for adc iyh
+                            697 .endm
+                            698 
+                            699 ;; Macro: sbc__iyh
+                            700 ;;    Opcode for "SBC iyh" instruction
+                            701 ;; 
+                            702 .macro sbc__iyh
+                            703    .dw #0x9CFD  ;; Opcode for sbc iyh
+                            704 .endm
+                            705 
+                            706 ;; Macro: and__iyh
+                            707 ;;    Opcode for "AND iyh" instruction
+                            708 ;; 
+                            709 .macro and__iyh
+                            710    .dw #0xA4FD  ;; Opcode for and iyh
+                            711 .endm
+                            712 
+                            713 ;; Macro: or__iyh
+                            714 ;;    Opcode for "OR iyh" instruction
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 15.
+Hexadecimal [16-Bits]
+
+
+
+                            715 ;; 
+                            716 .macro or__iyh
+                            717    .dw #0xB4FD  ;; Opcode for or iyh
+                            718 .endm
+                            719 
+                            720 ;; Macro: xor__iyh
+                            721 ;;    Opcode for "XOR iyh" instruction
+                            722 ;; 
+                            723 .macro xor__iyh
+                            724    .dw #0xACFD  ;; Opcode for xor iyh
+                            725 .endm
+                            726 
+                            727 ;; Macro: cp__iyh
+                            728 ;;    Opcode for "CP iyh" instruction
+                            729 ;; 
+                            730 .macro cp__iyh
+                            731    .dw #0xBCFD  ;; Opcode for cp iyh
+                            732 .endm
+                            733 
+                            734 ;; Macro: dec__iyh
+                            735 ;;    Opcode for "DEC iyh" instruction
+                            736 ;; 
+                            737 .macro dec__iyh
+                            738    .dw #0x25FD  ;; Opcode for dec iyh
+                            739 .endm
+                            740 
+                            741 ;; Macro: inc__iyh
+                            742 ;;    Opcode for "INC iyh" instruction
+                            743 ;; 
+                            744 .macro inc__iyh
+                            745    .dw #0x24FD  ;; Opcode for inc iyh
+                            746 .endm
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 16.
+Hexadecimal [16-Bits]
+
+
+
+                             24 
+                             25 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                             26 ;;
+                             27 ;; Function: cpct_drawCharM0_inner_asm
+                             28 ;;
+                             29 ;;    Inner function used by <cpct_drawCharM0> and <cpct_drawStringM0> to actually
+                             30 ;; draw the character. This function shall not be used directly unless you know
+                             31 ;; exactly what it does.
+                             32 ;;
+                             33 ;; Input Parameters (3 Bytes):
+                             34 ;;  (2B HL) video_memory - Video memory location where the character will be drawn
+                             35 ;;  (1B A ) ascii        - Character to be drawn (ASCII code)
+                             36 ;;
+                             37 ;; Assembly call (Input parameters on registers):
+                             38 ;;    > call cpct_drawCharM0_inner_asm
+                             39 ;;
+                             40 ;; Parameter Restrictions:
+                             41 ;;  * *video_memory* could theoretically be any 16-bit memory location. It will work
+                             42 ;; outside current screen memory boundaries, which is useful if you use any kind of
+                             43 ;; double buffer. However, be careful where you use it, as it does no kind of check
+                             44 ;; or clipping, and it could overwrite data if you select a wrong place to draw.
+                             45 ;;  * *ascii* could be any 8-bit value, as 256 characters are available in ROM.
+                             46 ;;
+                             47 ;; Requirements and limitations:
+                             48 ;;  * This function *assumes Lower ROM (0x0000-0x3FFF) is enabled* to read ROM character 
+                             49 ;; definitions. Therefore, this code should be above 0x3FFF to work; otherwise, it would
+                             50 ;; become shadowed by ROM and results would be undefined. You may, theoretically, use it
+                             51 ;; without ROM enabled and using your own character set definitions in RAM (0x3800-0x3FFF)
+                             52 ;;  * Screen is assumed to be standard mode 0 (160x200, 16 colours)
+                             53 ;;  * When reading from ROM, *interrupts should be disabled* to prevent firmware from
+                             54 ;; taking over and causing undefined behaviour. 
+                             55 ;;  * To make this function *work from ROM*, put the 4 bytes of *dc_2pxtableM0* in RAM.
+                             56 ;;
+                             57 ;; Details:
+                             58 ;;    This function reads a character from ROM and draws it at a given *video_memory* location.
+                             59 ;; *video_memory* points to the upper-left corner of location where the character will be drawn. 
+                             60 ;; As this function assumes screen is configured for Mode 0 (160x200, 16 colours), it means that 
+                             61 ;; the character can only be drawn at even pixel columns (0, 2, 4, 8...), because each byte 
+                             62 ;; contains 2 pixels in Mode 0. 
+                             63 ;;
+                             64 ;;    Character is drawn using 2 colours: foreground (FG) and background (BG). Both colours 
+                             65 ;; *must be* configured previously by calling <cpct_setDrawCharM0>. You may call this function 
+                             66 ;; once and then use the same colours for printing as long as you want. Every time you need 
+                             67 ;; different colours, you need to call <cpct_setDrawCharM0> again. Default colours are FG=1, BG=0
+                             68 ;; and will be used if <cpct_setDrawCharM0> has never been called previously.
+                             69 ;;
+                             70 ;;    This function is used by <cpct_drawCharM0> and <cpct_drawStringM0> as inner drawing loop.
+                             71 ;;
+                             72 ;; Destroyed Register values: 
+                             73 ;;    AF, BC, DE, HL, IX
+                             74 ;;
+                             75 ;; Required memory:
+                             76 ;;    100 bytes
+                             77 ;;
+                             78 ;; Time Measures:
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 17.
+Hexadecimal [16-Bits]
+
+
+
+                             79 ;; (start code)
+                             80 ;;   Case     | microSecs | CPU Cycles 
+                             81 ;; -------------------------------------
+                             82 ;;   Best     |    824    |    3300
+                             83 ;;   Worst    |    832    |    3332
+                             84 ;; -------------------------------------
+                             85 ;; (end code)
+                             86 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                             87 
+   0000                      88 _myDrawCharInner::
+                             89    ;; Calculate the memory address where the 8 bytes defining the character appearance 
+                             90    ;; ... start (IX = 0x3800 + 8*ASCII value). char0_ROM_address = 0x3800
+   0000 D6 20         [ 7]   91    sub      #32
+   0002 07            [ 4]   92    rlca           ;; [1] | A = E = 8*ASCII. 3 RLCA leave A with this
+   0003 07            [ 4]   93    rlca           ;; [1] |   |hgfedcba| => 3*RLCA => |edcba|hgf|         IXH         IXL
+   0004 07            [ 4]   94    rlca           ;; [1] | Then we need to move it to IX like this => |00111hgf| |edcba000|
+   0005 5F            [ 4]   95    ld    e, a     ;; [1] \ That will be the final memory address where the definition starts
+   0006 E6 07         [ 7]   96    and   #0x07    ;; [2] Isolate latest 3 bits of a |00000hgf|
+                             97    ;;or    #0x38    ;; [2] Add the 3 ones in front, so that the address starts at 0x38xx => |00111hgf|
+   0008                      98    ld__ixh_a      ;; [2] Save it to IXH = |00111hgf|
+   0008 DD 67                 1    .dw #0x67DD  ;; Opcode for ld ixh, a
+   000A 7B            [ 4]   99    ld    a, e     ;; [1] Restore A status after 3*RLCA => |edcba|hgf|
+   000B E6 F8         [ 7]  100    and   #0xF8    ;; [2] Isolate first 5 bits => |edcba|000|
+   000D                     101    ld__ixl_a      ;; [2] and save it to IXL = |edcba|000|
+   000D DD 6F                 1    .dw #0x6FDD  ;; Opcode for ld ixl, a
+                            102 
+   000F 01 40 00      [10]  103    ld    bc, #0x40
+   0012 DD 09         [15]  104    add   ix,bc
+                            105    ;; Now IX = |edcba|000||00111hgf| = 0x3800 + 8*ASCII
+                            106 
+   0014 01 65 00      [10]  107    ld    bc, #dc_2pxtableM0_    ;; [3] BC points to the 2 1-bit pixels to 2 4-bit pixels conversion table
+                            108    ;; Draw next line from the character to the screen
+   0017                     109 nextline:
+   0017 EB            [ 4]  110    ex    de, hl      ;; [1] Put Destination pointer into DE (it is in HL)
+   0018 DD 7E 00      [19]  111    ld     a, (ix)    ;; [5] A = Next Character pixel line definition 
+                            112                      ;; .... (8 bits defining 0 = background colour, 1 = foreground)
+                            113    ;; Copy the 4 bytes that compose the complete pixel line
+                            114    ;; repeating the code for each pair of pixels to maximize speed
+                            115 .rept 4
+                            116    ;; Convert next 2-bits into 1 byte with 2 pixels in screen pixel format
+                            117    ;; and copy it to (DE) which is next screen location
+                            118    ld    hl, #0      ;; [3] HL = 0
+                            119    rlca              ;; [1] /    Put the 2 leftmost bits of A into the two 
+                            120    rl    l           ;; [2] | ...rightmost bits of L. This is the combination for the
+                            121    rlca              ;; [1] | ...next 2 pixels (BG-BG, BG-FG, FG-BG, FG-FG). We use it
+                            122    rl    l           ;; [2] \ ...as index for the dc_2pxtableM0 which gets the actual pixel values.
+                            123    add   hl, bc      ;; [3] HL = BC + L (2pxtableM0 + Index = HL Points to the converted pixel values)
+                            124    ldi               ;; [5] Copy 2 pixels to the screen, incrementing DE at the same time
+                            125    inc   bc          ;; [2] BC is decremented by LDI but we want it to keep pointing to the table, so we add 1 again
+                            126 .endm
+                              1    ;; Convert next 2-bits into 1 byte with 2 pixels in screen pixel format
+                              2    ;; and copy it to (DE) which is next screen location
+   001B 21 00 00      [10]    3    ld    hl, #0      ;; [3] HL = 0
+   001E 07            [ 4]    4    rlca              ;; [1] /    Put the 2 leftmost bits of A into the two 
+   001F CB 15         [ 8]    5    rl    l           ;; [2] | ...rightmost bits of L. This is the combination for the
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 18.
+Hexadecimal [16-Bits]
+
+
+
+   0021 07            [ 4]    6    rlca              ;; [1] | ...next 2 pixels (BG-BG, BG-FG, FG-BG, FG-FG). We use it
+   0022 CB 15         [ 8]    7    rl    l           ;; [2] \ ...as index for the dc_2pxtableM0 which gets the actual pixel values.
+   0024 09            [11]    8    add   hl, bc      ;; [3] HL = BC + L (2pxtableM0 + Index = HL Points to the converted pixel values)
+   0025 ED A0         [16]    9    ldi               ;; [5] Copy 2 pixels to the screen, incrementing DE at the same time
+   0027 03            [ 6]   10    inc   bc          ;; [2] BC is decremented by LDI but we want it to keep pointing to the table, so we add 1 again
+                              1    ;; Convert next 2-bits into 1 byte with 2 pixels in screen pixel format
+                              2    ;; and copy it to (DE) which is next screen location
+   0028 21 00 00      [10]    3    ld    hl, #0      ;; [3] HL = 0
+   002B 07            [ 4]    4    rlca              ;; [1] /    Put the 2 leftmost bits of A into the two 
+   002C CB 15         [ 8]    5    rl    l           ;; [2] | ...rightmost bits of L. This is the combination for the
+   002E 07            [ 4]    6    rlca              ;; [1] | ...next 2 pixels (BG-BG, BG-FG, FG-BG, FG-FG). We use it
+   002F CB 15         [ 8]    7    rl    l           ;; [2] \ ...as index for the dc_2pxtableM0 which gets the actual pixel values.
+   0031 09            [11]    8    add   hl, bc      ;; [3] HL = BC + L (2pxtableM0 + Index = HL Points to the converted pixel values)
+   0032 ED A0         [16]    9    ldi               ;; [5] Copy 2 pixels to the screen, incrementing DE at the same time
+   0034 03            [ 6]   10    inc   bc          ;; [2] BC is decremented by LDI but we want it to keep pointing to the table, so we add 1 again
+                              1    ;; Convert next 2-bits into 1 byte with 2 pixels in screen pixel format
+                              2    ;; and copy it to (DE) which is next screen location
+   0035 21 00 00      [10]    3    ld    hl, #0      ;; [3] HL = 0
+   0038 07            [ 4]    4    rlca              ;; [1] /    Put the 2 leftmost bits of A into the two 
+   0039 CB 15         [ 8]    5    rl    l           ;; [2] | ...rightmost bits of L. This is the combination for the
+   003B 07            [ 4]    6    rlca              ;; [1] | ...next 2 pixels (BG-BG, BG-FG, FG-BG, FG-FG). We use it
+   003C CB 15         [ 8]    7    rl    l           ;; [2] \ ...as index for the dc_2pxtableM0 which gets the actual pixel values.
+   003E 09            [11]    8    add   hl, bc      ;; [3] HL = BC + L (2pxtableM0 + Index = HL Points to the converted pixel values)
+   003F ED A0         [16]    9    ldi               ;; [5] Copy 2 pixels to the screen, incrementing DE at the same time
+   0041 03            [ 6]   10    inc   bc          ;; [2] BC is decremented by LDI but we want it to keep pointing to the table, so we add 1 again
+                              1    ;; Convert next 2-bits into 1 byte with 2 pixels in screen pixel format
+                              2    ;; and copy it to (DE) which is next screen location
+   0042 21 00 00      [10]    3    ld    hl, #0      ;; [3] HL = 0
+   0045 07            [ 4]    4    rlca              ;; [1] /    Put the 2 leftmost bits of A into the two 
+   0046 CB 15         [ 8]    5    rl    l           ;; [2] | ...rightmost bits of L. This is the combination for the
+   0048 07            [ 4]    6    rlca              ;; [1] | ...next 2 pixels (BG-BG, BG-FG, FG-BG, FG-FG). We use it
+   0049 CB 15         [ 8]    7    rl    l           ;; [2] \ ...as index for the dc_2pxtableM0 which gets the actual pixel values.
+   004B 09            [11]    8    add   hl, bc      ;; [3] HL = BC + L (2pxtableM0 + Index = HL Points to the converted pixel values)
+   004C ED A0         [16]    9    ldi               ;; [5] Copy 2 pixels to the screen, incrementing DE at the same time
+   004E 03            [ 6]   10    inc   bc          ;; [2] BC is decremented by LDI but we want it to keep pointing to the table, so we add 1 again
+                            127 
+   004F                     128 endpixelline:
+                            129    ;; Move to next pixel-line definition of the character
+   004F                     130    inc__ixl          ;; [2] Next pixel Line (characters are 8-byte-aligned in memory, 
+   004F DD 2C                 1    .dw #0x2CDD  ;; Opcode for inc ixl
+                            131                      ;; ... so we only need to increment IXL, as IXH will not change)
+   0051                     132    ld__a_ixl         ;; [2] If next pixel line corresponds to a new character 
+   0051 DD 7D                 1    .dw #0x7DDD  ;; Opcode for ld a, ixl
+                            133                      ;; .... (this is, we have finished drawing our character), ....
+   0053 E6 07         [ 7]  134    and   #0x07       ;; [2] ... then L % 8 == 0, as it is 8-byte-aligned. 
+   0055 C8            [11]  135    ret   z           ;; [2/4] If L % 8 == 0, we have finished drawing the character, else, proceed to next line
+                            136 
+                            137    ;; Prepare to copy next line 
+                            138    ;;  -- Move DE pointer to the next pixel line on the video memory
+                            139    ;; (We save new calculations on HL, because it will be exchanged with DE at the start of nextline: loop)
+   0056 21 FC 07      [10]  140    ld    hl, #0x800-4      ;; [3] | Next pixel line is 0x800 bytes away in standard video modes
+   0059 19            [11]  141    add   hl, de            ;; [3] | ..but DE has already being incremented 4 times. So add 0x800-4 to
+                            142                            ;;       ..DE to make it point to the start of the next pixel line in video memory
+                            143    ;; Check if new address has crossed character boundaries (every 8 pixel lines)
+   005A 7C            [ 4]  144    ld     a, h             ;; [1] A = H (top 8 bits of video memory address)
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 19.
+Hexadecimal [16-Bits]
+
+
+
+   005B E6 38         [ 7]  145    and   #0x38             ;; [2] We check if we have crossed memory boundary (every 8 pixel lines)
+   005D 20 B8         [12]  146    jr    nz, nextline      ;; [2/3]  by checking the 4 bits that identify present memory line. 
+                            147                            ;; .... If 0, we have crossed boundaries
+   005F                     148 boundary_crossed:
+   005F 11 50 C0      [10]  149    ld    de, #0xC050       ;; [3] | HL = HL + 0xC050: Relocate DE pointer to the start of the next pixel line in video memory
+   0062 19            [11]  150    add   hl, de            ;; [3] \ (Remember that HL and DE will be exchanged at the start of nextline:)
+   0063 18 B2         [12]  151    jr    nextline          ;; [3] Jump to continue with next pixel line
+                            152 
+                            153 ;; Conversion table from 2 1-bit pixels to mode 0 2 4-bit pixels. Essentially, there are 4
+                            154 ;; possible combinations with 2 pixels and 2 colours: (00, 01, 10, 11 == BG-BG, BG-FG, FG-BG, FG-FG)
+                            155 ;; We reserve here 4 bytes that will be filled in by <cpct_setDrawCharM0>
+                            156 ;;
+   0065 00 0C C0 CC         157 dc_2pxtableM0_:: .db 0x00, 0x0C, 0xC0, 0xCC   ;; Default colours BG=0, FG=1

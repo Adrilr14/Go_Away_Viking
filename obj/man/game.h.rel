@@ -1,0 +1,8 @@
+XL2
+H 1 areas 4 global symbols
+M Game_Manager
+S man_game_update Ref0000
+S .__.ABS. Def0000
+S reset Ref0000
+S man_game_init2 Ref0000
+A _CODE size 0 flags 0 addr 0

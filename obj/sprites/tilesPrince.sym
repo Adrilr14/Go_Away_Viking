@@ -1,0 +1,136 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  2710 L
+    .__.ABS.                                                    =  0000 G
+    .__.CPU.                                                    =  0000 L
+    .__.H$L.                                                    =  0000 L
+  0 _tiles2_sp_000                                                 00D0 GR
+  0 _tiles2_sp_001                                                 00D8 GR
+  0 _tiles2_sp_002                                                 00E0 GR
+  0 _tiles2_sp_003                                                 00E8 GR
+  0 _tiles2_sp_004                                                 00F0 GR
+  0 _tiles2_sp_005                                                 00F8 GR
+  0 _tiles2_sp_006                                                 0100 GR
+  0 _tiles2_sp_007                                                 0108 GR
+  0 _tiles2_sp_008                                                 0110 GR
+  0 _tiles2_sp_009                                                 0118 GR
+  0 _tiles2_sp_010                                                 0120 GR
+  0 _tiles2_sp_011                                                 0128 GR
+  0 _tiles2_sp_012                                                 0130 GR
+  0 _tiles2_sp_013                                                 0138 GR
+  0 _tiles2_sp_014                                                 0140 GR
+  0 _tiles2_sp_015                                                 0148 GR
+  0 _tiles2_sp_016                                                 0150 GR
+  0 _tiles2_sp_017                                                 0158 GR
+  0 _tiles2_sp_018                                                 0160 GR
+  0 _tiles2_sp_019                                                 0168 GR
+  0 _tiles2_sp_020                                                 0170 GR
+  0 _tiles2_sp_021                                                 0178 GR
+  0 _tiles2_sp_022                                                 0180 GR
+  0 _tiles2_sp_023                                                 0188 GR
+  0 _tiles2_sp_024                                                 0190 GR
+  0 _tiles2_sp_025                                                 0198 GR
+  0 _tiles2_sp_026                                                 01A0 GR
+  0 _tiles2_sp_027                                                 01A8 GR
+  0 _tiles2_sp_028                                                 01B0 GR
+  0 _tiles2_sp_029                                                 01B8 GR
+  0 _tiles2_sp_030                                                 01C0 GR
+  0 _tiles2_sp_031                                                 01C8 GR
+  0 _tiles2_sp_032                                                 01D0 GR
+  0 _tiles2_sp_033                                                 01D8 GR
+  0 _tiles2_sp_034                                                 01E0 GR
+  0 _tiles2_sp_035                                                 01E8 GR
+  0 _tiles2_sp_036                                                 01F0 GR
+  0 _tiles2_sp_037                                                 01F8 GR
+  0 _tiles2_sp_038                                                 0200 GR
+  0 _tiles2_sp_039                                                 0208 GR
+  0 _tiles2_sp_040                                                 0210 GR
+  0 _tiles2_sp_041                                                 0218 GR
+  0 _tiles2_sp_042                                                 0220 GR
+  0 _tiles2_sp_043                                                 0228 GR
+  0 _tiles2_sp_044                                                 0230 GR
+  0 _tiles2_sp_045                                                 0238 GR
+  0 _tiles2_sp_046                                                 0240 GR
+  0 _tiles2_sp_047                                                 0248 GR
+  0 _tiles2_sp_048                                                 0250 GR
+  0 _tiles2_sp_049                                                 0258 GR
+  0 _tiles2_sp_050                                                 0260 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 _tiles2_sp_051                                                 0268 GR
+  0 _tiles2_sp_052                                                 0270 GR
+  0 _tiles2_sp_053                                                 0278 GR
+  0 _tiles2_sp_054                                                 0280 GR
+  0 _tiles2_sp_055                                                 0288 GR
+  0 _tiles2_sp_056                                                 0290 GR
+  0 _tiles2_sp_057                                                 0298 GR
+  0 _tiles2_sp_058                                                 02A0 GR
+  0 _tiles2_sp_059                                                 02A8 GR
+  0 _tiles2_sp_060                                                 02B0 GR
+  0 _tiles2_sp_061                                                 02B8 GR
+  0 _tiles2_sp_062                                                 02C0 GR
+  0 _tiles2_sp_063                                                 02C8 GR
+  0 _tiles2_sp_064                                                 02D0 GR
+  0 _tiles2_sp_065                                                 02D8 GR
+  0 _tiles2_sp_066                                                 02E0 GR
+  0 _tiles2_sp_067                                                 02E8 GR
+  0 _tiles2_sp_068                                                 02F0 GR
+  0 _tiles2_sp_069                                                 02F8 GR
+  0 _tiles2_sp_070                                                 0300 GR
+  0 _tiles2_sp_071                                                 0308 GR
+  0 _tiles2_sp_072                                                 0310 GR
+  0 _tiles2_sp_073                                                 0318 GR
+  0 _tiles2_sp_074                                                 0320 GR
+  0 _tiles2_sp_075                                                 0328 GR
+  0 _tiles2_sp_076                                                 0330 GR
+  0 _tiles2_sp_077                                                 0338 GR
+  0 _tiles2_sp_078                                                 0340 GR
+  0 _tiles2_sp_079                                                 0348 GR
+  0 _tiles2_sp_080                                                 0350 GR
+  0 _tiles2_sp_081                                                 0358 GR
+  0 _tiles2_sp_082                                                 0360 GR
+  0 _tiles2_sp_083                                                 0368 GR
+  0 _tiles2_sp_084                                                 0370 GR
+  0 _tiles2_sp_085                                                 0378 GR
+  0 _tiles2_sp_086                                                 0380 GR
+  0 _tiles2_sp_087                                                 0388 GR
+  0 _tiles2_sp_088                                                 0390 GR
+  0 _tiles2_sp_089                                                 0398 GR
+  0 _tiles2_sp_090                                                 03A0 GR
+  0 _tiles2_sp_091                                                 03A8 GR
+  0 _tiles2_sp_092                                                 03B0 GR
+  0 _tiles2_sp_093                                                 03B8 GR
+  0 _tiles2_sp_094                                                 03C0 GR
+  0 _tiles2_sp_095                                                 03C8 GR
+  0 _tiles2_sp_096                                                 03D0 GR
+  0 _tiles2_sp_097                                                 03D8 GR
+  0 _tiles2_sp_098                                                 03E0 GR
+  0 _tiles2_sp_099                                                 03E8 GR
+  0 _tiles2_sp_100                                                 03F0 GR
+  0 _tiles2_sp_101                                                 03F8 GR
+  0 _tiles2_sp_102                                                 0400 GR
+  0 _tiles2_sp_103                                                 0408 GR
+  0 _tilesPrince                                                   0000 GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 3.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE                                      size  410   flags    0
+   1 _DATA                                      size    0   flags    0
+   2 _INITIALIZED                               size    0   flags    0
+   3 _DABS                                      size    0   flags    8
+   4 _HOME                                      size    0   flags    0
+   5 _GSINIT                                    size    0   flags    0
+   6 _GSFINAL                                   size    0   flags    0
+   7 _INITIALIZER                               size    0   flags    0
+   8 _CABS                                      size    0   flags    8
+

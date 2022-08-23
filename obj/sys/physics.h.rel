@@ -1,0 +1,12 @@
+XL2
+H 1 areas 8 global symbols
+M Physics_System
+S move_hammer Ref0000
+S .__.ABS. Def0000
+S sys_physics_update Ref0000
+S entity_moveKeyboard Ref0000
+S entity_enemy_move Ref0000
+S entity_move Ref0000
+S entity_nothing Ref0000
+S move_enemy Ref0000
+A _CODE size 0 flags 0 addr 0

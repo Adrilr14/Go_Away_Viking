@@ -1,0 +1,44 @@
+XL2
+H 1 areas 29 global symbols
+S man_patrol_init Ref0000
+S _patrol_l10_01 Ref0000
+S _patrol_l20_01 Ref0000
+S _patrol_l11_01 Ref0000
+S _patrol_l10_02 Ref0000
+S .__.ABS. Def0000
+S _patrol_l20_02 Ref0000
+S _patrol_l12_01 Ref0000
+S _patrol_l11_02 Ref0000
+S _patrol_l10_03 Ref0000
+S _patrol_l20_03 Ref0000
+S _patrol_l13_01 Ref0000
+S _patrol_l12_02 Ref0000
+S _patrol_l14_01 Ref0000
+S _patrol_l13_02 Ref0000
+S _patrol_l15_01 Ref0000
+S _patrol_l14_02 Ref0000
+S _patrol_l16_01 Ref0000
+S _patrol_l15_02 Ref0000
+S _patrol_l17_01 Ref0000
+S _patrol_l16_02 Ref0000
+S _patrol_l18_01 Ref0000
+S _patrol_l17_02 Ref0000
+S _patrol_l19_01 Ref0000
+S _patrol_l18_02 Ref0000
+S _patrol_l17_03 Ref0000
+S _patrol_l19_02 Ref0000
+S _patrol_l18_03 Ref0000
+S _patrol_l19_03 Ref0000
+S _patrol_l2_01 Ref0000
+S _patrol_l3_01 Ref0000
+S _patrol_l4_01 Ref0000
+S _patrol_l3_02 Ref0000
+S _patrol_l5_01 Ref0000
+S _patrol_l5_02 Ref0000
+S _patrol_l7_01 Ref0000
+S _patrol_l8_01 Ref0000
+S _patrol_l7_02 Ref0000
+S _patrol_l9_01 Ref0000
+S _patrol_l8_02 Ref0000
+S _patrol_l9_02 Ref0000
+A _CODE size 0 flags 0 addr 0

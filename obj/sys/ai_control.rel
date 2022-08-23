@@ -1,0 +1,151 @@
+XL2
+H 1 areas 4B global symbols
+M cpct_keyboard
+S man_patrol_init Ref0000
+S man_entity_forall_matching Ref0000
+S update_XOR_borrar_IX Ref0000
+S update_XOR_borrar_IY Ref0000
+S man_entity_getEntityVector_IX Ref0000
+S man_entity_create Ref0000
+S man_entity_init Ref0000
+S _enemy_sp_0 Ref0000
+S _enemy_sp_1 Ref0000
+S _enemy_sp_2 Ref0000
+S man_entity_ladder_invisible_matching Ref0000
+S sys_render_init Ref0000
+S _main_palette Ref0000
+S sys_render_newScene Ref0000
+S man_entity_forall Ref0000
+S _hammer_sp Ref0000
+S _patrol_l10_01 Ref0000
+S _patrol_l20_01 Ref0000
+S _patrol_l11_01 Ref0000
+S _patrol_l10_02 Ref0000
+S .__.ABS. Def0000
+S _patrol_l20_02 Ref0000
+S _patrol_l12_01 Ref0000
+S _patrol_l11_02 Ref0000
+S _patrol_l10_03 Ref0000
+S _patrol_l20_03 Ref0000
+S _patrol_l13_01 Ref0000
+S _patrol_l12_02 Ref0000
+S sys_render_update Ref0000
+S _patrol_l14_01 Ref0000
+S _patrol_l13_02 Ref0000
+S man_entity_destroy Ref0000
+S _patrol_l15_01 Ref0000
+S _patrol_l14_02 Ref0000
+S man_entity_getEntity_hero_IY Ref0000
+S ren_init_backBuffer Ref0000
+S _patrol_l16_01 Ref0000
+S _patrol_l15_02 Ref0000
+S _patrol_l17_01 Ref0000
+S _patrol_l16_02 Ref0000
+S _patrol_l18_01 Ref0000
+S _patrol_l17_02 Ref0000
+S _patrol_l19_01 Ref0000
+S _patrol_l18_02 Ref0000
+S _patrol_l17_03 Ref0000
+S _invisible_sp Ref0000
+S _patrol_l19_02 Ref0000
+S _patrol_l18_03 Ref0000
+S _patrol_l19_03 Ref0000
+S _hammer_lado_sp_0 Ref0000
+S _hammer_lado_sp_1 Ref0000
+S _key_sp Ref0000
+S _patrol_l2_01 Ref0000
+S _patrol_l3_01 Ref0000
+S sys_render_clearBackBuffer Ref0000
+S _patrol_l4_01 Ref0000
+S _patrol_l3_02 Ref0000
+S _patrol_l5_01 Ref0000
+S _patrol_l5_02 Ref0000
+S _patrol_l7_01 Ref0000
+S _patrol_l8_01 Ref0000
+S _patrol_l7_02 Ref0000
+S _patrol_l9_01 Ref0000
+S _patrol_l8_02 Ref0000
+S _patrol_l9_02 Ref0000
+S _viking_sp_0 Ref0000
+S _viking_sp_1 Ref0000
+S _viking_sp_2 Ref0000
+S sys_render_handler Ref0000
+S man_entity_forall_pairs_matching Ref0000
+A _CODE size 98 flags 0 addr 0
+S sys_ai_control_update Def0001
+S sys_ai_move_to Def0024
+S sys_ai_patrol Def0069
+S sys_ai_stand_by Def0018
+S sys_ai_control_init Def0000
+T 00 00
+R 00 00 00 00
+T 00 00 C9
+R 00 00 00 00
+T 01 00
+R 00 00 00 00
+T 01 00 DD 7E 0E FE 00 28 0F
+R 00 00 00 00
+T 08 00
+R 00 00 00 00
+T 08 00 FE 01 CC 18 00 FE 02 CC 24 00 FE 04 CC
+R 00 00 00 00 00 05 00 00 00 0A 00 00
+T 15 00 69 00
+R 00 00 00 00 00 02 00 00
+T 17 00
+R 00 00 00 00
+T 17 00 C9
+R 00 00 00 00
+T 18 00
+R 00 00 00 00
+T 18 00 CD 00 00 DD 36 0F 01 DD 36 0E 04 C9
+R 00 00 00 00 02 03 22 00
+T 24 00
+R 00 00 00 00
+T 24 00 DD 7E 0C DD 96 02 30 06
+R 00 00 00 00
+T 2C 00
+R 00 00 00 00
+T 2C 00 DD 36 04 FF 18 0C
+R 00 00 00 00
+T 32 00
+R 00 00 00 00
+T 32 00 28 06 DD 36 04 01 18 04
+R 00 00 00 00
+T 3A 00
+R 00 00 00 00
+T 3A 00 DD 36 04 00
+R 00 00 00 00
+T 3E 00
+R 00 00 00 00
+T 3E 00 DD 7E 0D DD 96 03 30 06
+R 00 00 00 00
+T 46 00
+R 00 00 00 00
+T 46 00 DD 36 05 FE 18 1C
+R 00 00 00 00
+T 4C 00
+R 00 00 00 00
+T 4C 00 28 06 DD 36 05 02 18 14
+R 00 00 00 00
+T 54 00
+R 00 00 00 00
+T 54 00 DD 36 05 00 DD 7E 04 B7 20 0A DD 7E 0F DD
+R 00 00 00 00
+T 62 00 77 0E DD 36 0F 02
+R 00 00 00 00
+T 68 00
+R 00 00 00 00
+T 68 00 C9
+R 00 00 00 00
+T 69 00
+R 00 00 00 00
+T 69 00 DD 6E 10 DD 66 11 7E FE FF 28 19 7E DD 77
+R 00 00 00 00
+T 77 00 0C 23 7E DD 77 0D 23 DD 75 10 DD 74 11 DD
+R 00 00 00 00
+T 85 00 36 0F 04 DD 36 0E 02 C9
+R 00 00 00 00
+T 8D 00
+R 00 00 00 00
+T 8D 00 23 7E 23 66 DD 77 10 DD 74 11 C9
+R 00 00 00 00

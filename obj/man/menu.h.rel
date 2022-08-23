@@ -1,0 +1,14 @@
+XL2
+H 1 areas B global symbols
+S man_menu_run Ref0000
+S _myDrawStringM0 Ref0000
+S man_menu_continue Ref0000
+S man_menu_credits Ref0000
+S .__.ABS. Def0000
+S man_menu_lose Ref0000
+S man_menu_controls Ref0000
+S man_menu_level_completed Ref0000
+S man_menu_init Ref0000
+S _screenmenu_c_end Ref0000
+S man_menu_finish Ref0000
+A _CODE size 0 flags 0 addr 0

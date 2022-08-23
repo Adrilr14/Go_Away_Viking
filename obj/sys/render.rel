@@ -1,0 +1,130 @@
+XL2
+H 1 areas 40 global symbols
+M Render_System
+S man_entity_forall_matching Ref0000
+S cpct_getScreenToSprite_asm Ref0000
+S cpct_isKeyPressed_asm Ref0000
+S cpct_scanKeyboard_f_asm Ref0000
+S cpct_setPalette_asm Ref0000
+S cpct_setPALColour_asm Ref0000
+S man_entity_getEntityVector_IX Ref0000
+S man_entity_create Ref0000
+S man_entity_init Ref0000
+S cpct_drawStringM0_asm Ref0000
+S cpct_drawStringM1_asm Ref0000
+S _enemy_sp_0 Ref0000
+S cpct_drawSprite_asm Ref0000
+S _enemy_sp_1 Ref0000
+S move_hammer Ref0000
+S _enemy_sp_2 Ref0000
+S man_entity_ladder_invisible_matching Ref0000
+S cpct_etm_drawTileBox2x4_asm Ref0000
+S cpct_etm_setTileset2x4_asm Ref0000
+S _main_palette Ref0000
+S man_entity_forall Ref0000
+S _hammer_sp Ref0000
+S .__.ABS. Def0000
+S cpct_setBlendMode_asm Ref0000
+S man_entity_destroy Ref0000
+S man_entity_getEntity_hero_IY Ref0000
+S cpct_setVideoMemoryPage_asm Ref0000
+S sys_physics_update Ref0000
+S cpct_memset_f64_asm Ref0000
+S entity_moveKeyboard Ref0000
+S _invisible_sp Ref0000
+S _hammer_lado_sp_0 Ref0000
+S _hammer_lado_sp_1 Ref0000
+S _key_sp Ref0000
+S cpct_scanKeyboard_if_asm Ref0000
+S entity_enemy_move Ref0000
+S cpct_zx7b_decrunch_s_asm Ref0000
+S cpct_isAnyKeyPressed_f_asm Ref0000
+S cpct_memset_f8_asm Ref0000
+S cpct_setVideoMode_asm Ref0000
+S cpct_waitVSYNC_asm Ref0000
+S entity_move Ref0000
+S entity_nothing Ref0000
+S move_enemy Ref0000
+S _viking_sp_0 Ref0000
+S _viking_sp_1 Ref0000
+S cpct_akp_musicInit_asm Ref0000
+S _viking_sp_2 Ref0000
+S cpct_disableFirmware_asm Ref0000
+S cpct_akp_musicPlay_asm Ref0000
+S cpct_drawSpriteBlended_asm Ref0000
+S cpct_setDrawCharM0_asm Ref0000
+S man_entity_forall_pairs_matching Ref0000
+S cpct_scanKeyboard_asm Ref0000
+S cpct_setDrawCharM1_asm Ref0000
+S cpct_getScreenPtr_asm Ref0000
+A _CODE size CB flags 0 addr 0
+S update_XOR_borrar_IX Def0087
+S update_XOR_borrar_IY Def00A9
+S sys_render_init Def002C
+S sys_render_newScene Def000B
+S sys_render_update Def0057
+S ren_init_backBuffer Def001D
+S sys_render_clearBackBuffer Def000F
+S sys_render_handler Def0002
+T 00 00 C0 80
+R 00 00 00 00
+T 02 00
+R 00 00 00 00
+T 02 00 21 57 00 3E 04 CD 00 00 C9
+R 00 00 00 00 00 03 00 00 02 08 00 00
+T 0B 00
+R 00 00 00 00
+T 0B 00 CD 41 00 C9
+R 00 00 00 00 00 03 00 00
+T 0F 00
+R 00 00 00 00
+T 0F 00 21 00 C0 36 00 11 01 C0 01 FF 3F ED B0 C9
+R 00 00 00 00
+T 1D 00
+R 00 00 00 00
+T 1D 00 3A 01 00 67 11 00 00 01 00 40 6B CD 00 00
+R 00 00 00 00 00 03 00 00 02 0E 26 00
+T 2B 00 C9
+R 00 00 00 00
+T 2C 00
+R 00 00 00 00
+T 2C 00 0E 00 CD 00 00 21 10 14 CD 00 00 21 00 00
+R 00 00 00 00 02 05 27 00 02 0B 05 00 02 0E 13 00
+T 3A 00 11 10 00 CD 00 00 C9
+R 00 00 00 00 02 06 04 00
+T 41 00
+R 00 00 00 00
+T 41 00 3A 01 00 47 3A 00 00 32 01 00 78 32
+R 00 00 00 00 00 03 00 00 00 07 00 00 00 0A 00 00
+T 4D 00 00 00 CB 38 CB 38 68 C3 00 00
+R 00 00 00 00 00 02 00 00 02 0A 1A 00
+T 57 00
+R 00 00 00 00
+T 57 00
+R 00 00 00 00
+T 57 00 11 00 C0 DD 4E 02 DD 46 03 CD 00 00 EB 2E
+R 00 00 00 00 02 0C 37 00
+T 65 00 B6 CD 00 00 DD 6E 12 DD 66 13 DD 4E 07 DD
+R 00 00 00 00 02 04 17 00
+T 73 00 46 06 CD 00 00 DD 7E 00 E6 02 C0 DD 7E 00
+R 00 00 00 00 02 05 32 00
+T 81 00 D6 04 DD 77 00 C9
+R 00 00 00 00
+T 87 00
+R 00 00 00 00
+T 87 00 2E AE CD 00 00 11 00 C0 DD 4E 02 DD 46 03
+R 00 00 00 00 02 05 17 00
+T 95 00 CD 00 00 EB DD 6E 12 DD 66 13 DD 4E 07 DD
+R 00 00 00 00 02 03 37 00
+T A3 00 46 06 CD 00 00 C9
+R 00 00 00 00 02 05 32 00
+T A9 00
+R 00 00 00 00
+T A9 00
+R 00 00 00 00
+T A9 00 2E AE CD 00 00 11 00 C0 FD 4E 02 FD 46 03
+R 00 00 00 00 02 05 17 00
+T B7 00 CD 00 00 EB FD 6E 12 FD 66 13 FD 4E 07 FD
+R 00 00 00 00 02 03 37 00
+T C5 00 46 06 CD 00 00 C9
+R 00 00 00 00 02 05 32 00

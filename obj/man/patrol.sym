@@ -1,0 +1,39 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
+    .__.H$L.=  0000 L   |   0 _patrol_   0054 GR  |   0 _patrol_   005B GR
+  0 _patrol_   0062 GR  |   0 _patrol_   0069 GR  |   0 _patrol_   0070 GR
+  0 _patrol_   007F GR  |   0 _patrol_   0090 GR  |   0 _patrol_   009F R
+  0 _patrol_   00A6 GR  |   0 _patrol_   00B1 R   |   0 _patrol_   00BC R
+  0 _patrol_   00CD GR  |   0 _patrol_   00E4 R   |   0 _patrol_   011C GR
+  0 _patrol_   0129 R   |   0 _patrol_   00ED GR  |   0 _patrol_   0115 R
+  0 _patrol_   00FF R   |   0 _patrol_   0108 R   |   0 _patrol_   00F6 R
+  0 _patrol_   0134 GR  |   0 _patrol_   013D R   |   0 _patrol_   0144 R
+  0 _patrol_   014D R   |   0 _patrol_   0158 R   |   0 _patrol_   0161 GR
+  0 _patrol_   0168 GR  |   0 _patrol_   016F GR  |   0 _patrol_   0176 GR
+  0 _patrol_   017D GR  |   0 _patrol_   0184 R   |   0 _patrol_   018F R
+  0 _patrol_   0196 GR  |   0 _patrol_   019D R   |   0 _patrol_   01A8 R
+  0 _patrol_   01AF GR  |   0 _patrol_   01B6 GR  |   0 _patrol_   01BD R
+  0 _patrol_   01C8 R   |   0 _patrol_   01CF GR  |   0 _patrol_   01D8 R
+  0 _patrol_   01E3 R   |   0 _patrol_   01EA GR  |   0 _patrol_   01F5 R
+  0 _patrol_   01FC GR  |   0 _patrol_   020D R   |   0 _patrol_   0214 GR
+  0 _patrol_   0223 R   |   0 _patrol_   022A GR  |   0 _patrol_   0231 R
+  0 _patrol_   023C R   |   0 _patrol_   0243 GR  |   0 _patrol_   024A R
+  0 _patrol_   0255 R   |   0 _patrol_   025C GR  |   0 _patrol_   0263 R
+  0 _patrol_   026A R   |   0 _patrol_   0273 R   |   0 _patrol_   027C R
+  0 _patrol_   0000 GR  |   0 _patrol_   0007 GR  |   0 _patrol_   000E GR
+  0 _patrol_   0015 GR  |   0 _patrol_   001C GR  |   0 _patrol_   0023 GR
+  0 _patrol_   002A GR  |   0 _patrol_   0031 GR  |   0 _patrol_   0038 GR
+  0 _patrol_   003F GR  |   0 _patrol_   0046 GR  |   0 _patrol_   004D GR
+  0 man_patr   0283 GR  |     patrol_i=  FFFFFFFF 
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE      size  284   flags    0
+

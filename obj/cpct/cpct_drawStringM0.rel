@@ -1,0 +1,24 @@
+XL2
+H 1 areas 4 global symbols
+M cpct_strings
+S _myDrawCharInner Ref0000
+S .__.ABS. Def0000
+S _cpct_mode_rom_status Ref0000
+A _CODE size 14 flags 0 addr 0
+S _myDrawStringM0 Def0000
+T 00 00
+R 00 00 00 00
+T 00 00 18 0B
+R 00 00 00 00
+T 02 00
+R 00 00 00 00
+T 02 00 E5 CD 00 00 E1 11 04 00 19 FD 23
+R 00 00 00 00 02 04 00 00
+T 0D 00
+R 00 00 00 00
+T 0D 00 FD 7E 00 B7 20 EF
+R 00 00 00 00
+T 13 00
+R 00 00 00 00
+T 13 00 C9
+R 00 00 00 00

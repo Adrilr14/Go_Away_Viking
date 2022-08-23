@@ -1,0 +1,14 @@
+XL2
+H 1 areas A global symbols
+M Render_System
+S update_XOR_borrar_IX Ref0000
+S update_XOR_borrar_IY Ref0000
+S sys_render_init Ref0000
+S _main_palette Ref0000
+S sys_render_newScene Ref0000
+S .__.ABS. Def0000
+S sys_render_update Ref0000
+S ren_init_backBuffer Ref0000
+S sys_render_clearBackBuffer Ref0000
+S sys_render_handler Ref0000
+A _CODE size 0 flags 0 addr 0

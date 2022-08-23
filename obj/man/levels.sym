@@ -1,0 +1,49 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
+    .__.H$L.=  0000 L   |     _level1    **** GX  |     _level10   **** GX
+    _level10   **** GX  |     _level11   **** GX  |     _level11   **** GX
+    _level12   **** GX  |     _level12   **** GX  |     _level13   **** GX
+    _level13   **** GX  |     _level14   **** GX  |     _level14   **** GX
+    _level15   **** GX  |     _level15   **** GX  |     _level16   **** GX
+    _level16   **** GX  |     _level17   **** GX  |     _level17   **** GX
+    _level18   **** GX  |     _level18   **** GX  |     _level19   **** GX
+    _level19   **** GX  |     _level1_   **** GX  |     _level2    **** GX
+    _level20   **** GX  |     _level20   **** GX  |     _level2_   **** GX
+    _level3    **** GX  |     _level3_   **** GX  |     _level4    **** GX
+    _level4_   **** GX  |     _level5    **** GX  |     _level5_   **** GX
+    _level6    **** GX  |     _level6_   **** GX  |     _level7    **** GX
+    _level7_   **** GX  |     _level8    **** GX  |     _level8_   **** GX
+    _level9    **** GX  |     _level9_   **** GX  |     _tilesPr   **** GX
+    _tilesPr   **** GX  |     _tilesPr   **** GX  |     cpct_akp   **** GX
+    cpct_akp   **** GX  |     cpct_dis   **** GX  |     cpct_dra   **** GX
+    cpct_dra   **** GX  |     cpct_dra   **** GX  |     cpct_dra   **** GX
+    cpct_etm   **** GX  |     cpct_etm   **** GX  |     cpct_get   **** GX
+    cpct_get   **** GX  |     cpct_isA   **** GX  |     cpct_isK   **** GX
+    cpct_mem   **** GX  |     cpct_mem   **** GX  |     cpct_sca   **** GX
+    cpct_sca   **** GX  |     cpct_sca   **** GX  |     cpct_set   **** GX
+    cpct_set   **** GX  |     cpct_set   **** GX  |     cpct_set   **** GX
+    cpct_set   **** GX  |     cpct_set   **** GX  |     cpct_wai   **** GX
+    cpct_zx7   **** GX  |   0 descompr   083C R   |   0 descompr   0896 R
+  0 descompr   08A0 R   |   0 descompr   08AA R   |   0 descompr   08B4 R
+  0 descompr   08BE R   |   0 descompr   08C8 R   |   0 descompr   08D2 R
+  0 descompr   08DC R   |   0 descompr   08E6 R   |   0 descompr   08F0 R
+  0 descompr   0846 R   |   0 descompr   08FA R   |   0 descompr   0850 R
+  0 descompr   085A R   |   0 descompr   0864 R   |   0 descompr   086E R
+  0 descompr   0878 R   |   0 descompr   0882 R   |   0 descompr   088C R
+  0 insert_t   0925 R   |   0 insert_t   090F R   |   0 insert_t   0917 R
+  0 insert_t   091F R   |   0 man_leve   07D7 GR  |   0 man_leve   07E0 GR
+  0 man_leve   0000 GR  |   0 man_leve=  07CF R   |     man_leve=  0032 
+    man_leve=  07D0     |     man_leve=  0028     |   0 man_leve   0904 GR
+  0 man_leve   07D1 GR  |   0 num_leve   07D0 GR
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE      size  93A   flags    0
+
